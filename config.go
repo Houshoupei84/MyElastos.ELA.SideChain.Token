@@ -56,7 +56,7 @@ type config struct {
 			MinTxFee     int64
 			InstantBlock bool
 		}
-		RpcConfiguration  jsonrpc.RpcConfiguration     `json:"RpcConfiguration"`
+		RpcConfiguration jsonrpc.RpcConfiguration `json:"RpcConfiguration"`
 	}
 }
 
@@ -70,8 +70,7 @@ type appConfig struct {
 	MaxLogsFolderSize int64
 	MaxPerLogFileSize int64
 	MonitorState      bool
-	RpcConfiguration  jsonrpc.RpcConfiguration     `json:"RpcConfiguration"`
-
+	RpcConfiguration  jsonrpc.RpcConfiguration `json:"RpcConfiguration"`
 }
 
 func loadNewConfig() (*appConfig, error) {
